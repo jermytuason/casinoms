@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasinoMS.Core", "CasinoMS.Core\CasinoMS.Core.csproj", "{B0B1A86A-6405-498A-A3A5-DEF76E9208FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasinoMS.Data", "CasinoMS.Data\CasinoMS.Data.csproj", "{18BC675B-E75E-49FD-B476-42CC43C576B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasinoMS.Api", "CasinoMS.Api\CasinoMS.Api.csproj", "{A85B41B6-2131-457C-A4CA-72DDE2826001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasinoMS.Angular", "CasinoMS.Angular\CasinoMS.Angular.csproj", "{FDDD4BF8-86C1-4DBA-B6CF-5275878DD851}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0B1A86A-6405-498A-A3A5-DEF76E9208FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B1A86A-6405-498A-A3A5-DEF76E9208FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B1A86A-6405-498A-A3A5-DEF76E9208FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B1A86A-6405-498A-A3A5-DEF76E9208FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18BC675B-E75E-49FD-B476-42CC43C576B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BC675B-E75E-49FD-B476-42CC43C576B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BC675B-E75E-49FD-B476-42CC43C576B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BC675B-E75E-49FD-B476-42CC43C576B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A85B41B6-2131-457C-A4CA-72DDE2826001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85B41B6-2131-457C-A4CA-72DDE2826001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85B41B6-2131-457C-A4CA-72DDE2826001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A85B41B6-2131-457C-A4CA-72DDE2826001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDD4BF8-86C1-4DBA-B6CF-5275878DD851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDD4BF8-86C1-4DBA-B6CF-5275878DD851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDD4BF8-86C1-4DBA-B6CF-5275878DD851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDD4BF8-86C1-4DBA-B6CF-5275878DD851}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B23235D-BEE0-42BA-9072-DFB3B8EA7F5F}
+	EndGlobalSection
+EndGlobal
