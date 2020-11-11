@@ -39,36 +39,20 @@ namespace CasinoMS.Core.Common
 
         private static void SendEmail(string email, string emailTo, string subject, string body, string password)
         {
-            //using (MailMessage mm = new MailMessage(email, emailTo))
-            //{
-            //    mm.Subject = subject;
-            //    mm.Body = body;
-
-            //    mm.IsBodyHtml = true;
-            //    SmtpClient smtp = new SmtpClient();
-            //    smtp.Host = "smtp.gmail.com";
-            //    smtp.EnableSsl = true;
-            //    NetworkCredential NetworkCred = new NetworkCredential(email, password);
-            //    smtp.UseDefaultCredentials = false;
-            //    smtp.Credentials = NetworkCred;
-            //    smtp.Port = 587;
-            //    smtp.Send(mm);
-            //}
-
-            using (MailMessage mail = new MailMessage())
+            using (MailMessage mm = new MailMessage(email, emailTo))
             {
-                mail.From = new MailAddress(email);
-                mail.To.Add(emailTo);
-                mail.Subject = subject;
-                mail.Body = body;
-                mail.IsBodyHtml = true;
+                mm.Subject = subject;
+                mm.Body = body;
 
-                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
-                {
-                    smtp.Credentials = new NetworkCredential(email, password);
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
-                }
+                mm.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                NetworkCredential NetworkCred = new NetworkCredential(email, password);
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = NetworkCred;
+                smtp.Port = 587;
+                smtp.Send(mm);
             }
         }
     }
