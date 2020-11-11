@@ -20,6 +20,7 @@ namespace CasinoMS.Data.Entity.Information
         [Required, StringLength(30)]
         public string ReferenceNo { get; set; }
         [Required, StringLength(30)]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Amount { get; set; }
         [StringLength(20)]
         public string SubmittedBy { get; set; }

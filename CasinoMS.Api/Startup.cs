@@ -24,6 +24,8 @@ using Microsoft.IdentityModel.Tokens;
 using CasinoMS.Core.Model;
 using CasinoMS.Data.Repository.TransactionDetails;
 using System.IO;
+using CasinoMS.Core.Interface;
+using CasinoMS.Core.WorkerService;
 
 namespace CasinoMS
 {
@@ -81,6 +83,14 @@ namespace CasinoMS
             services.AddScoped<IUserTypeRepository, UserTypeRepository>();
             services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddScoped<ITransactionDetailsRepository, TransactionDetailsRepository>();
+
+            #endregion
+
+            #region Worker Service Bindings
+
+            services.AddScoped<ILoaderNotification, LoaderNotificationWorkerService>();
+            services.AddScoped<IFinancerNotification, FinancerNotificationWorkerService>();
+            services.AddScoped<IUserWorkerService, UserWorkerService>();
 
             #endregion
 

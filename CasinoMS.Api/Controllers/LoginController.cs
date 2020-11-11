@@ -63,7 +63,7 @@ namespace CasinoMS.Api.Controllers
                         {
                         new Claim("UserID", user.Id.ToString())
                         }),
-                        Expires = DateTime.Now.AddHours(10),
+                        Expires = DateTime.UtcNow.AddHours(8),
                         SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.JWT_Secret)),
                                                                         SecurityAlgorithms.HmacSha256Signature)
                     };

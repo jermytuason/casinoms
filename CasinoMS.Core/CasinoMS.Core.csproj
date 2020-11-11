@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
     <Folder Include="Common\" />
-    <Folder Include="WorkerService\" />
   </ItemGroup>
 
 </Project>

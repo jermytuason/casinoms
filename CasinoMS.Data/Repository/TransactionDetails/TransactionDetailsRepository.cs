@@ -189,7 +189,7 @@ namespace CasinoMS.Data.Repository.TransactionDetails
             transactionDetails.ReferenceNo = model.ReferenceNo;
             transactionDetails.Amount = model.Amount;
             transactionDetails.SubmittedBy = model.Alias;
-            transactionDetails.SubmittedDate = DateTime.Now;
+            transactionDetails.SubmittedDate = DateTime.UtcNow.AddHours(8);
             transactionDetails.UserId = Guid.Parse(model.UserId);
             transactionDetails.ProcessId = Guid.Parse(model.ProcessId);
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CasinoMS.Core.Common;
 using CasinoMS.Core.Constants;
+using CasinoMS.Core.Interface;
 using CasinoMS.Data.Repositories.ErrorLogs;
 using CasinoMS.Data.Repository.User;
 using CasinoMS.Data.ViewModel;
@@ -22,6 +23,7 @@ namespace CasinoMS.Api.Controllers
 
         private readonly IUserRepository userRepository;
         private readonly IErrorLogsRepository errorLogsRepository;
+        private readonly IUserWorkerService userWorkerService;
         private string message = "";
         private Guid processId;
 
@@ -29,10 +31,11 @@ namespace CasinoMS.Api.Controllers
 
         #region Constructor
 
-        public UserController(IUserRepository userRepository, IErrorLogsRepository errorLogsRepository)
+        public UserController(IUserRepository userRepository, IErrorLogsRepository errorLogsRepository, IUserWorkerService userWorkerService)
         {
             this.userRepository = userRepository;
             this.errorLogsRepository = errorLogsRepository;
+            this.userWorkerService = userWorkerService;
         }
 
         #endregion
@@ -95,7 +98,7 @@ namespace CasinoMS.Api.Controllers
 
                 if (userRepository.Commit())
                 {
-                    //userWorkerService.SendEmailConfirmationPerUser(model.UserType, model.EmailAddress, DataHandler.GetFullName(model.FirstName, model.LastName));
+                    userWorkerService.SendEmailConfirmationPerUser(model.UserType, model.EmailAddress, DataHandler.GetFullName(model.FirstName, model.LastName));
                     return Ok(result);
                 }
 

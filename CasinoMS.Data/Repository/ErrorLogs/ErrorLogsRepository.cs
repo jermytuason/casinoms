@@ -32,7 +32,7 @@ namespace CasinoMS.Data.Repositories.ErrorLogs
             errorLog.InnerException = model.InnerException;
             errorLog.WebAPI = model.WebAPI;
             errorLog.ExecutedBy = model.ExecutedBy;
-            errorLog.ExecutedDate = DateTime.Now;
+            errorLog.ExecutedDate = DateTime.UtcNow.AddHours(8);
 
             casinoMSDBContext.Add(errorLog);
         }

@@ -207,7 +207,7 @@ namespace CasinoMS.Data.Repository.User
             account.UserName = model.UserName;
             account.UserId = Guid.NewGuid();
             account.CreatedBy = DataHandler.GetFullName(model.FirstName, model.LastName);
-            account.CreatedDate = DateTime.Now;
+            account.CreatedDate = DateTime.UtcNow.AddHours(8);
             account.IsActive = true;
 
             var result = await userManager.CreateAsync(account, model.Password);
