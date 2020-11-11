@@ -47,10 +47,9 @@ namespace CasinoMS.Core.Common
                 mm.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";
-                smtp.EnableSsl = true;
-                NetworkCredential NetworkCred = new NetworkCredential(email, password);
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = NetworkCred;
+                smtp.Credentials = new NetworkCredential(email, password);
+                smtp.EnableSsl = true;
                 smtp.Port = 587;
                 smtp.Send(mm);
             }
