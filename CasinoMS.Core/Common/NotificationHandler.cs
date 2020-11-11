@@ -39,19 +39,25 @@ namespace CasinoMS.Core.Common
 
         private static void SendEmail(string email, string emailTo, string subject, string body, string password)
         {
-            using (MailMessage mm = new MailMessage(email, emailTo))
+            var smtp = new SmtpClient
             {
-                mm.Subject = subject;
-                mm.Body = body;
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(email, "fxmbbcknbnedhljb"),
+                Timeout = 10000
+            };
+            using (var message = new MailMessage(email, emailTo)
+            {
+                IsBodyHtml = true,
+                Subject = subject,
+                Body = body
 
-                mm.IsBodyHtml = true;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.EnableSsl = true;
-                smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential(email, password);
-                smtp.Port = 587;
-                smtp.Send(mm);
+            })
+            {
+                smtp.Send(message);
             }
         }
     }
