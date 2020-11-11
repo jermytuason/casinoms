@@ -1162,7 +1162,7 @@ class CashOutComponent {
     }
     onSaveComplete() {
         this.transactionDetailsForm.reset();
-        this.transactionDetailsForm.get("transactionType").setValue("Cash-In");
+        this.transactionDetailsForm.get("transactionType").setValue("Cash-Out");
         this.isFormDirty.emit(false);
         this.toastr.success("Transaction submitted successfully.", "CASH-OUT TRANSACTION");
         this.ngxService.stop();
