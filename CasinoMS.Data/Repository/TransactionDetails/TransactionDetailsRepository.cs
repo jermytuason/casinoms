@@ -30,7 +30,113 @@ namespace CasinoMS.Data.Repository.TransactionDetails
         {
             var entities = casinoMSDBContext.inf_transaction_details
                                           .Include(x => x.InfUser)
+                                          .OrderByDescending(x => x.SubmittedDate)
                                           .ToList();
+
+            var model = new List<TransactionDetailsViewModel>();
+
+            if (entities != null)
+            {
+                foreach (var item in entities)
+                {
+                    var transactionDetailsViewModel = new TransactionDetailsViewModel();
+
+                    transactionDetailsViewModel.Id = item.Id.ToString();
+                    transactionDetailsViewModel.TransactionId = item.TransactionId.ToString();
+                    transactionDetailsViewModel.TransactionType = item.TransactionType;
+                    transactionDetailsViewModel.PlayerUserName = item.PlayerUserName;
+                    transactionDetailsViewModel.ReferenceNo = item.ReferenceNo;
+                    transactionDetailsViewModel.Amount = item.Amount;
+                    transactionDetailsViewModel.SubmittedBy = item.SubmittedBy;
+                    transactionDetailsViewModel.SubmittedDate = item.SubmittedDate.ToString();
+                    transactionDetailsViewModel.FullName = DataHandler.GetFullName(item.InfUser.FirstName, item.InfUser.LastName);
+                    transactionDetailsViewModel.UserId = item.InfUser.UserId.ToString();
+                    transactionDetailsViewModel.ProcessId = item.ProcessId.ToString();
+
+                    model.Add(transactionDetailsViewModel);
+                }
+            }
+
+            return model;
+        }
+
+        public IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByTeam(string teamName)
+        {
+            var entities = casinoMSDBContext.inf_transaction_details
+                                            .Include(x => x.InfUser)
+                                            .Where(x => x.InfUser.DefTeams.Description == teamName)
+                                            .OrderByDescending(x => x.SubmittedDate)
+                                            .ToList();
+
+            var model = new List<TransactionDetailsViewModel>();
+
+            if (entities != null)
+            {
+                foreach (var item in entities)
+                {
+                    var transactionDetailsViewModel = new TransactionDetailsViewModel();
+
+                    transactionDetailsViewModel.Id = item.Id.ToString();
+                    transactionDetailsViewModel.TransactionId = item.TransactionId.ToString();
+                    transactionDetailsViewModel.TransactionType = item.TransactionType;
+                    transactionDetailsViewModel.PlayerUserName = item.PlayerUserName;
+                    transactionDetailsViewModel.ReferenceNo = item.ReferenceNo;
+                    transactionDetailsViewModel.Amount = item.Amount;
+                    transactionDetailsViewModel.SubmittedBy = item.SubmittedBy;
+                    transactionDetailsViewModel.SubmittedDate = item.SubmittedDate.ToString();
+                    transactionDetailsViewModel.FullName = DataHandler.GetFullName(item.InfUser.FirstName, item.InfUser.LastName);
+                    transactionDetailsViewModel.UserId = item.InfUser.UserId.ToString();
+                    transactionDetailsViewModel.ProcessId = item.ProcessId.ToString();
+
+                    model.Add(transactionDetailsViewModel);
+                }
+            }
+
+            return model;
+        }
+
+        public IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByUserId(Guid userId)
+        {
+            var entities = casinoMSDBContext.inf_transaction_details
+                                            .Include(x => x.InfUser)
+                                            .Where(x => x.InfUser.UserId == userId)
+                                            .OrderByDescending(x => x.SubmittedDate)
+                                            .ToList();
+
+            var model = new List<TransactionDetailsViewModel>();
+
+            if (entities != null)
+            {
+                foreach (var item in entities)
+                {
+                    var transactionDetailsViewModel = new TransactionDetailsViewModel();
+
+                    transactionDetailsViewModel.Id = item.Id.ToString();
+                    transactionDetailsViewModel.TransactionId = item.TransactionId.ToString();
+                    transactionDetailsViewModel.TransactionType = item.TransactionType;
+                    transactionDetailsViewModel.PlayerUserName = item.PlayerUserName;
+                    transactionDetailsViewModel.ReferenceNo = item.ReferenceNo;
+                    transactionDetailsViewModel.Amount = item.Amount;
+                    transactionDetailsViewModel.SubmittedBy = item.SubmittedBy;
+                    transactionDetailsViewModel.SubmittedDate = item.SubmittedDate.ToString();
+                    transactionDetailsViewModel.FullName = DataHandler.GetFullName(item.InfUser.FirstName, item.InfUser.LastName);
+                    transactionDetailsViewModel.UserId = item.InfUser.UserId.ToString();
+                    transactionDetailsViewModel.ProcessId = item.ProcessId.ToString();
+
+                    model.Add(transactionDetailsViewModel);
+                }
+            }
+
+            return model;
+        }
+
+        public IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByDates(string teamName, DateTime startDate, DateTime endDate)
+        {
+            var entities = casinoMSDBContext.inf_transaction_details
+                                            .Include(x => x.InfUser)
+                                            .Where(x => x.InfUser.DefTeams.Description == teamName && x.SubmittedDate >= startDate && x.SubmittedDate <= endDate)
+                                            .OrderByDescending(x => x.SubmittedDate)
+                                            .ToList();
 
             var model = new List<TransactionDetailsViewModel>();
 
@@ -111,74 +217,6 @@ namespace CasinoMS.Data.Repository.TransactionDetails
             }
 
             return transactionDetailsViewModel;
-        }
-
-        public IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByUserId(Guid userId)
-        {
-            var entities = casinoMSDBContext.inf_transaction_details
-                                            .Include(x => x.InfUser)
-                                            .Where(x => x.InfUser.UserId == userId)
-                                            .ToList();
-
-            var model = new List<TransactionDetailsViewModel>();
-
-            if (entities != null)
-            {
-                foreach (var item in entities)
-                {
-                    var transactionDetailsViewModel = new TransactionDetailsViewModel();
-
-                    transactionDetailsViewModel.Id = item.Id.ToString();
-                    transactionDetailsViewModel.TransactionId = item.TransactionId.ToString();
-                    transactionDetailsViewModel.TransactionType = item.TransactionType;
-                    transactionDetailsViewModel.PlayerUserName = item.PlayerUserName;
-                    transactionDetailsViewModel.ReferenceNo = item.ReferenceNo;
-                    transactionDetailsViewModel.Amount = item.Amount;
-                    transactionDetailsViewModel.SubmittedBy = item.SubmittedBy;
-                    transactionDetailsViewModel.SubmittedDate = item.SubmittedDate.ToString();
-                    transactionDetailsViewModel.FullName = DataHandler.GetFullName(item.InfUser.FirstName, item.InfUser.LastName);
-                    transactionDetailsViewModel.UserId = item.InfUser.UserId.ToString();
-                    transactionDetailsViewModel.ProcessId = item.ProcessId.ToString();
-
-                    model.Add(transactionDetailsViewModel);
-                }
-            }
-
-            return model;
-        }
-
-        public IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByDates(DateTime startDate, DateTime endDate)
-        {
-            var entities = casinoMSDBContext.inf_transaction_details
-                                            .Include(x => x.InfUser)
-                                            .Where(x => x.SubmittedDate >= startDate && x.SubmittedDate <= endDate)
-                                            .ToList();
-
-            var model = new List<TransactionDetailsViewModel>();
-
-            if (entities != null)
-            {
-                foreach (var item in entities)
-                {
-                    var transactionDetailsViewModel = new TransactionDetailsViewModel();
-
-                    transactionDetailsViewModel.Id = item.Id.ToString();
-                    transactionDetailsViewModel.TransactionId = item.TransactionId.ToString();
-                    transactionDetailsViewModel.TransactionType = item.TransactionType;
-                    transactionDetailsViewModel.PlayerUserName = item.PlayerUserName;
-                    transactionDetailsViewModel.ReferenceNo = item.ReferenceNo;
-                    transactionDetailsViewModel.Amount = item.Amount;
-                    transactionDetailsViewModel.SubmittedBy = item.SubmittedBy;
-                    transactionDetailsViewModel.SubmittedDate = item.SubmittedDate.ToString();
-                    transactionDetailsViewModel.FullName = DataHandler.GetFullName(item.InfUser.FirstName, item.InfUser.LastName);
-                    transactionDetailsViewModel.UserId = item.InfUser.UserId.ToString();
-                    transactionDetailsViewModel.ProcessId = item.ProcessId.ToString();
-
-                    model.Add(transactionDetailsViewModel);
-                }
-            }
-
-            return model;
         }
 
         public void AddTransactionDetails(TransactionDetailsViewModel model)

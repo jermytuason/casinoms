@@ -7,5 +7,6 @@ namespace CasinoMS.Core.Interface
     public interface IUserWorkerService
     {
         void SendEmailConfirmationPerUser(string userType, string emailAddress, string fullName);
+        void SendEmailVerificationPerUser(string userType, string emailAddress, string fullName);
     }
 }

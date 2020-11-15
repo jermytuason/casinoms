@@ -190,6 +190,35 @@ namespace CasinoMS.Data.Repository.User
             return userViewModel;
         }
 
+        public UserViewModel GetActiveUserByUserName(string userName)
+        {
+            var account = casinoMSDBContext.scr_account.FirstOrDefault(x => x.UserName == userName);
+
+            var userViewModel = new UserViewModel();
+
+            if (account != null)
+            {
+                var entity = casinoMSDBContext.inf_user
+                                              .Include(x => x.DefTeams)
+                                              .Include(x => x.DefUserType)
+                                              .Where(x => x.UserId == account.UserId)
+                                              .FirstOrDefault();
+
+                userViewModel.FirstName = entity.FirstName;
+                userViewModel.LastName = entity.LastName;
+                userViewModel.FullName = DataHandler.GetFullName(entity.FirstName, entity.LastName);
+                userViewModel.Alias = entity.Alias;
+                userViewModel.TeamName = entity.DefTeams.Description;
+                userViewModel.EmailAddress = account.Email;
+                userViewModel.UserName = account.UserName;
+                userViewModel.UserType = entity.DefUserType.Description;
+                userViewModel.UserId = entity.UserId.ToString();
+                userViewModel.IsActive = account.IsActive;
+            }
+
+            return userViewModel;
+        }
+
         public async Task<ScrAccount> GetUserById(string id)
         {
             return await userManager.FindByIdAsync(id);
@@ -204,11 +233,11 @@ namespace CasinoMS.Data.Repository.User
         {
             var account = new ScrAccount();
             account.Email = model.EmailAddress;
-            account.UserName = model.UserName;
+            account.UserName = model.UserName.ToLower().Trim();
             account.UserId = Guid.NewGuid();
             account.CreatedBy = DataHandler.GetFullName(model.FirstName, model.LastName);
             account.CreatedDate = DateTime.UtcNow.AddHours(8);
-            account.IsActive = true;
+            account.IsActive = false;
 
             var result = await userManager.CreateAsync(account, model.Password);
 
@@ -238,9 +267,34 @@ namespace CasinoMS.Data.Repository.User
             casinoMSDBContext.Add(user);
         }
 
-        public void UpdateUser(Guid id)
+        public UserViewModel UpdateUserByUserName(string userName)
         {
-            throw new NotImplementedException();
+            var account = casinoMSDBContext.scr_account.FirstOrDefault(x => x.UserName == userName);
+            account.IsActive = true;
+
+            var userViewModel = new UserViewModel();
+
+            if (account != null)
+            {
+                var entity = casinoMSDBContext.inf_user
+                                              .Include(x => x.DefTeams)
+                                              .Include(x => x.DefUserType)
+                                              .Where(x => x.UserId == account.UserId)
+                                              .FirstOrDefault();
+
+                userViewModel.FirstName = entity.FirstName;
+                userViewModel.LastName = entity.LastName;
+                userViewModel.FullName = DataHandler.GetFullName(entity.FirstName, entity.LastName);
+                userViewModel.Alias = entity.Alias;
+                userViewModel.TeamName = entity.DefTeams.Description;
+                userViewModel.EmailAddress = account.Email;
+                userViewModel.UserName = account.UserName;
+                userViewModel.UserType = entity.DefUserType.Description;
+                userViewModel.UserId = entity.UserId.ToString();
+                userViewModel.IsActive = account.IsActive;
+            }
+
+            return userViewModel;
         }
 
         public void DeleteUser(Guid id)

@@ -11,6 +11,7 @@ using CasinoMS.Core.Model;
 using CasinoMS.Data.Repositories.ErrorLogs;
 using CasinoMS.Data.Repository.User;
 using CasinoMS.Data.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

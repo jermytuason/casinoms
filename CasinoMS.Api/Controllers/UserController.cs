@@ -63,6 +63,29 @@ namespace CasinoMS.Api.Controllers
             }
         }
 
+        // GET: api/User/GetActiveUserByUserName
+        [HttpGet]
+        [Route("GetActiveUserByUserName/{userName}")]
+        public ActionResult<UserViewModel> GetActiveUserByUserName(string userName)
+        {
+            processId = Guid.NewGuid();
+
+            try
+            {
+                return Ok(userRepository.GetActiveUserByUserName(userName));
+            }
+            catch (Exception ex)
+            {
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
+                {
+                    message = ex.InnerException.Message;
+                }
+
+                PostError(processId, ex.Message, message, WebAPINamesConstants.GetTransactionDetails, null);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
         // GET: api/User/GetAllLoaderUsersByTeam
         [HttpGet]
         [Authorize]
@@ -98,7 +121,7 @@ namespace CasinoMS.Api.Controllers
 
                 if (userRepository.Commit())
                 {
-                    userWorkerService.SendEmailConfirmationPerUser(model.UserType, model.EmailAddress, DataHandler.GetFullName(model.FirstName, model.LastName));
+                    userWorkerService.SendEmailVerificationPerUser(model.UserType, model.EmailAddress, DataHandler.GetFullName(model.FirstName, model.LastName));
                     return Ok(result);
                 }
 
@@ -112,6 +135,38 @@ namespace CasinoMS.Api.Controllers
                 }
 
                 PostError(processId, ex.Message, message, WebAPINamesConstants.PostUser, null);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        // PUT: api/User/ActivateUser
+        [HttpPut]
+        [Authorize]
+        [Route("ActivateUser/{userName}")]
+        public ActionResult<UserViewModel> ActivateUser(string userName)
+        {
+            processId = Guid.NewGuid();
+
+            try
+            {
+                var user = userRepository.UpdateUserByUserName(userName);
+
+                if (userRepository.Commit())
+                {
+                    userWorkerService.SendEmailConfirmationPerUser(user.UserType, user.EmailAddress, DataHandler.GetFullName(user.FirstName, user.LastName));
+                    return Ok(user);
+                }
+
+                return BadRequest($"Failed to activate new user.");
+            }
+            catch (Exception ex)
+            {
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
+                {
+                    message = ex.InnerException.Message;
+                }
+
+                PostError(processId, ex.Message, message, WebAPINamesConstants.GetTransactionDetails, userName);
                 return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
         }

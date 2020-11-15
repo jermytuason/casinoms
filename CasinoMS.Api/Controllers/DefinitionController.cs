@@ -53,7 +53,7 @@ namespace CasinoMS.Api.Controllers
             }
             catch (Exception ex)
             {
-                if (ObjectHandler.IsObjectNull(ex.InnerException))
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
                 {
                     message = ex.InnerException.Message;
                 }
@@ -75,7 +75,7 @@ namespace CasinoMS.Api.Controllers
             }
             catch (Exception ex)
             {
-                if (ObjectHandler.IsObjectNull(ex.InnerException))
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
                 {
                     message = ex.InnerException.Message;
                 }
@@ -97,7 +97,7 @@ namespace CasinoMS.Api.Controllers
             }
             catch (Exception ex)
             {
-                if (ObjectHandler.IsObjectNull(ex.InnerException))
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
                 {
                     message = ex.InnerException.Message;
                 }
@@ -119,7 +119,7 @@ namespace CasinoMS.Api.Controllers
             }
             catch (Exception ex)
             {
-                if (ObjectHandler.IsObjectNull(ex.InnerException))
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
                 {
                     message = ex.InnerException.Message;
                 }
@@ -141,7 +141,7 @@ namespace CasinoMS.Api.Controllers
             }
             catch (Exception ex)
             {
-                if (ObjectHandler.IsObjectNull(ex.InnerException))
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
                 {
                     message = ex.InnerException.Message;
                 }
@@ -163,7 +163,7 @@ namespace CasinoMS.Api.Controllers
             }
             catch (Exception ex)
             {
-                if (ObjectHandler.IsObjectNull(ex.InnerException))
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
                 {
                     message = ex.InnerException.Message;
                 }

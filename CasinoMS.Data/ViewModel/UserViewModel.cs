@@ -24,5 +24,6 @@ namespace CasinoMS.Data.ViewModel
         [Required]
         public string UserType { get; set; }
         public string UserId { get; set; }
+        public bool IsActive { get; set; }
     }
 }

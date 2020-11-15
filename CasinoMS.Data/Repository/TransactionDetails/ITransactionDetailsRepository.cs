@@ -8,10 +8,11 @@ namespace CasinoMS.Data.Repository.TransactionDetails
     public interface ITransactionDetailsRepository
     {
         IEnumerable<TransactionDetailsViewModel> GetAllTransactionDetails();
+        IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByTeam(string teamName);
+        IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByUserId(Guid userId);
+        IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByDates(string teamName, DateTime startDate, DateTime endDate);
         TransactionDetailsViewModel GetTransactionDetailsById(Guid transactionId);
         TransactionDetailsViewModel GetTransactionDetailsByReferenceNo(string referenceNo);
-        IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByUserId(Guid userId);
-        IEnumerable<TransactionDetailsViewModel> GetTransactionDetailsByDates(DateTime startDate, DateTime endDate);
         void AddTransactionDetails(TransactionDetailsViewModel model);
         void UpdateTransactionDetails(Guid id);
         void DeleteTransactionDetails(Guid id);

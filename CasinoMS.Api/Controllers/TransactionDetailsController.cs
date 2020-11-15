@@ -42,13 +42,14 @@ namespace CasinoMS.Api.Controllers
         // GET: api/GetTransactionDetails
         [HttpGet]
         [Authorize]
-        public ActionResult<IEnumerable<TransactionDetailsViewModel>> GetTransactionDetails()
+        public async Task<ActionResult<IEnumerable<TransactionDetailsViewModel>>> GetTransactionDetails()
         {
             processId = Guid.NewGuid();
+            var user = await GetAuthenticatedUser();
 
             try
             {
-                return Ok(transactionDetailsRepository.GetAllTransactionDetails());
+                return Ok(transactionDetailsRepository.GetTransactionDetailsByTeam(user.Value.TeamName));
             }
             catch (Exception ex)
             {
@@ -98,7 +99,7 @@ namespace CasinoMS.Api.Controllers
 
             try
             {
-                return Ok(transactionDetailsRepository.GetTransactionDetailsByDates(startDate, endDate));
+                return Ok(transactionDetailsRepository.GetTransactionDetailsByDates(user.Value.TeamName, startDate, endDate));
             }
             catch (Exception ex)
             {

@@ -21,6 +21,7 @@ namespace CasinoMS.Core.WorkerService
             this.loaderNotification = loaderNotification;
             this.financerNotification = financerNotification;
         }
+
         public void SendEmailConfirmationPerUser(string userType, string emailAddress, string fullName)
         {
             if (userType.Equals(UserTypeConstants.Loader))
@@ -30,6 +31,18 @@ namespace CasinoMS.Core.WorkerService
             else if (userType.Equals(UserTypeConstants.Financer))
             {
                 NotificationHandler.SendEmailConfirmation(financerNotification, fullName, emailAddress);
+            }
+        }
+
+        public void SendEmailVerificationPerUser(string userType, string emailAddress, string fullName)
+        {
+            if (userType.Equals(UserTypeConstants.Loader))
+            {
+                NotificationHandler.SendEmailVerification(loaderNotification, fullName, emailAddress);
+            }
+            else if (userType.Equals(UserTypeConstants.Financer))
+            {
+                NotificationHandler.SendEmailVerification(financerNotification, fullName, emailAddress);
             }
         }
     }
