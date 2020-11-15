@@ -19,14 +19,11 @@ namespace CasinoMS.Core.WorkerService
         {
             model.Subject = "Casino MS Financer Account Confirmation";
             model.Body = $"<p>Good Day {fullName},</p>" +
-                            "<p> &nbsp;</p>" +
                             "<p> Welcome to Casino MS! Your Financer Account has been successfully validated and is now active. " + 
                             "You can now utilize the system's functionality such as tracking the cash-in &amp; cash-out transactions of your loaders, " + 
                             "tallying amounts from Casino MS to ALT to prevent discrepancy and report generations.</p> " +
-                            "<p> &nbsp;</p>" +
                             "<p> For suggestions or functionality request, please send an email to&nbsp; " + 
                             "<a href = 'mailto:jjttechnologies@gmail.com'> jjttechnologies@gmail.com </a>.</p> " +
-                            "<p> &nbsp;</p> " +
                             "<p> Best regards,</p>" +
                             "<p> Casino MS Team</p>";
             model.Email = "jjttechnologies@gmail.com";
