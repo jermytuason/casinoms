@@ -1974,6 +1974,22 @@ class LoadersTransactionsComponent {
             error: err => this.errorMessage = err
         });
     }
+    searchValueChange(val) {
+        if (val == "") {
+            if (!this.isFilterSuccess) {
+                this.transactionService.getTransactionDetails().subscribe({
+                    next: transactionDetails => this.transactionDetails = this.onComplete(transactionDetails),
+                    error: err => this.errorMessage = err
+                });
+            }
+            else {
+                this.transactionService.getTransactionDetailsByDates(this.startDate, this.endDate).subscribe({
+                    next: transactionDetails => this.transactionDetails = this.onFilterComplete(transactionDetails),
+                    error: err => this.errorMessage = err
+                });
+            }
+        }
+    }
     toggleDateInput() {
         this.showDateInput = !this.showDateInput;
     }
@@ -2083,7 +2099,7 @@ LoadersTransactionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 15);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "input", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function LoadersTransactionsComponent_Template_input_ngModelChange_22_listener($event) { return ctx.searchValue = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function LoadersTransactionsComponent_Template_input_ngModelChange_22_listener($event) { return ctx.searchValue = $event; })("ngModelChange", function LoadersTransactionsComponent_Template_input_ngModelChange_22_listener($event) { return ctx.searchValueChange($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 18);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "span", 19);
@@ -2885,6 +2901,9 @@ __webpack_require__.r(__webpack_exports__);
 
 class SearchFilterPipe {
     transform(transactionDetails, searchValue, filterMetadata) {
+        this.filteredTransactionDetails = null;
+        this.cashIn = 0;
+        this.cashOut = 0;
         if (!transactionDetails || !searchValue) {
             return transactionDetails;
         }
