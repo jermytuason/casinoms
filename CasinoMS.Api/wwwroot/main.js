@@ -737,10 +737,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ng-idle/keepalive */ "./node_modules/@ng-idle/keepalive/__ivy_ngcc__/fesm2015/ng-idle-keepalive.js");
 /* harmony import */ var angular2_moment__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! angular2-moment */ "./node_modules/angular2-moment/__ivy_ngcc__/index.js");
 /* harmony import */ var angular2_moment__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(angular2_moment__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _record_record_update_dialog_record_update_dialog_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./record/record-update-dialog/record-update-dialog.component */ "./src/app/record/record-update-dialog/record-update-dialog.component.ts");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
-/* harmony import */ var _user_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./user/user-profile/user-profile.component */ "./src/app/user/user-profile/user-profile.component.ts");
-
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _user_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./user/user-profile/user-profile.component */ "./src/app/user/user-profile/user-profile.component.ts");
 
 
 
@@ -816,7 +814,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             ngx_ui_loader__WEBPACK_IMPORTED_MODULE_21__["NgxUiLoaderModule"].forRoot(customUiLoader),
             _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_22__["NgIdleKeepaliveModule"].forRoot(),
             angular2_moment__WEBPACK_IMPORTED_MODULE_23__["MomentModule"],
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbModule"]
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_24__["NgbModule"]
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
         _user_user_component__WEBPACK_IMPORTED_MODULE_5__["UserComponent"],
@@ -830,14 +828,13 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _reports_loaders_transactions_loaders_transactions_component__WEBPACK_IMPORTED_MODULE_16__["LoadersTransactionsComponent"],
         _reports_my_transactions_my_transactions_component__WEBPACK_IMPORTED_MODULE_17__["MyTransactionsComponent"],
         _shared_pipes_search_filter_pipe__WEBPACK_IMPORTED_MODULE_19__["SearchFilterPipe"],
-        _record_record_update_dialog_record_update_dialog_component__WEBPACK_IMPORTED_MODULE_24__["RecordUpdateDialogComponent"],
-        _user_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_26__["UserProfileComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _user_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_25__["UserProfileComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_10__["ToastrModule"], ngx_pagination__WEBPACK_IMPORTED_MODULE_18__["NgxPaginationModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"], ngx_ui_loader__WEBPACK_IMPORTED_MODULE_21__["NgxUiLoaderModule"], _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_22__["NgIdleKeepaliveModule"], angular2_moment__WEBPACK_IMPORTED_MODULE_23__["MomentModule"],
-        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbModule"]] }); })();
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_24__["NgbModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
@@ -854,8 +851,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _reports_loaders_transactions_loaders_transactions_component__WEBPACK_IMPORTED_MODULE_16__["LoadersTransactionsComponent"],
                     _reports_my_transactions_my_transactions_component__WEBPACK_IMPORTED_MODULE_17__["MyTransactionsComponent"],
                     _shared_pipes_search_filter_pipe__WEBPACK_IMPORTED_MODULE_19__["SearchFilterPipe"],
-                    _record_record_update_dialog_record_update_dialog_component__WEBPACK_IMPORTED_MODULE_24__["RecordUpdateDialogComponent"],
-                    _user_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_26__["UserProfileComponent"],
+                    _user_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_25__["UserProfileComponent"],
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -869,7 +865,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     ngx_ui_loader__WEBPACK_IMPORTED_MODULE_21__["NgxUiLoaderModule"].forRoot(customUiLoader),
                     _ng_idle_keepalive__WEBPACK_IMPORTED_MODULE_22__["NgIdleKeepaliveModule"].forRoot(),
                     angular2_moment__WEBPACK_IMPORTED_MODULE_23__["MomentModule"],
-                    _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbModule"]
+                    _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_24__["NgbModule"]
                 ],
                 providers: [_shared_excel_service__WEBPACK_IMPORTED_MODULE_20__["ExcelService"]],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -985,14 +981,19 @@ AuthLoaderGuard.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineI
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _shared_global_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../shared/global.service */ "./src/app/shared/global.service.ts");
+
 
 
 class HomeComponent {
-    constructor() { }
+    constructor(globalService) {
+        this.globalService = globalService;
+    }
     ngOnInit() {
+        this.globalService.redirectUnauthorizedUser();
     }
 }
-HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };
+HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_global_service__WEBPACK_IMPORTED_MODULE_1__["GlobalService"])); };
 HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 13, vars: 0, consts: [[1, "home-section"], [1, "container-fluid"], [1, "jumbotron", "jumbotron-container"], [1, "display-4"], [1, "lead"], ["href", "mailto:jjttechnologies@gmail.com"], [1, "my-4"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -1022,7 +1023,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
                 templateUrl: './home.component.html',
                 styleUrls: ['./home.component.scss']
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return [{ type: _shared_global_service__WEBPACK_IMPORTED_MODULE_1__["GlobalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -1045,7 +1046,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/transaction.service */ "./src/app/shared/transaction.service.ts");
 /* harmony import */ var ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-ui-loader */ "./node_modules/ngx-ui-loader/__ivy_ngcc__/fesm2015/ngx-ui-loader.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/shared/global.service */ "./src/app/shared/global.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
 
 
 
@@ -1094,12 +1097,13 @@ const _c0 = function (a0, a1) { return { "col-md-12 margin-bottom-sm": a0, "col-
 const _c1 = function (a0, a1) { return { "fa fa-people-arrows": a0, "fas fa-arrow-circle-left": a1 }; };
 const _c2 = function (a0, a1, a2) { return { "is-invalid": a0, "is-valid": a1, "": a2 }; };
 class CashInComponent {
-    constructor(fb, toastr, transactionService, ngxService, userService) {
+    constructor(fb, toastr, transactionService, ngxService, userService, globalService) {
         this.fb = fb;
         this.toastr = toastr;
         this.transactionService = transactionService;
         this.ngxService = ngxService;
         this.userService = userService;
+        this.globalService = globalService;
         this.loaderList = [];
         this.isCashInForOtherLoader = false;
         this.cashInButtonText = "Cash-In for other Loader";
@@ -1120,6 +1124,7 @@ class CashInComponent {
         this.constants = new src_app_shared_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"]();
     }
     ngOnInit() {
+        this.globalService.redirectUnauthorizedUser();
         this.transactionDetailsForm = this.fb.group({
             transactionType: ['Cash-In'],
             loaderList: [''],
@@ -1231,7 +1236,7 @@ class CashInComponent {
         form.get("transactionType").setValue("Cash-In");
     }
 }
-CashInComponent.ɵfac = function CashInComponent_Factory(t) { return new (t || CashInComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__["TransactionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__["NgxUiLoaderService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"])); };
+CashInComponent.ɵfac = function CashInComponent_Factory(t) { return new (t || CashInComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__["TransactionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__["NgxUiLoaderService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_8__["GlobalService"])); };
 CashInComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CashInComponent, selectors: [["app-cash-in"]], outputs: { isFormDirty: "isFormDirty" }, decls: 64, vars: 31, consts: [[1, "cash-in-section"], [1, "container", "margin-top-lg", "cash-inout-container"], [1, "card"], [1, "card-body"], [1, "card-title", "text-uppercase", "d-flex", "align-items-center"], ["src", "\\assets\\images\\cash-in-icon.png", "alt", "Generic placeholder image", 1, "align-self-center", "mr-3", 2, "width", "70px", "height", "70px"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "row", "margin-top-md"], [1, "col"], [3, "formGroup", "ngSubmit"], [1, "row", "margin-top-sm"], [3, "ngClass"], ["type", "button", 1, "btn", "btn-outline-dark", "full-width", 3, "click"], ["class", "col-md-6", 4, "ngIf"], [1, "form-group"], [1, "input-group"], [1, "input-group-prepend"], [1, "input-group-text"], [1, "fas", "fa-cash-register"], ["id", "TransactionTypeId", "placeholder", "Transaction Type *", "formControlName", "transactionType", "type", "text", "disabled", "", 1, "form-control"], [1, "col-md-6"], [1, "fa", "fa-user", "margin-right-xsm"], ["id", "PlayerUserNameId", "placeholder", "Player Username (optional)", "formControlName", "playerUserName", "type", "text", 1, "form-control", 3, "ngClass"], [1, "invalid-feedback"], [1, "fa", "fa-barcode"], ["id", "ReferenceNoId", "placeholder", "Reference No. *", "formControlName", "referenceNo", "type", "text", 1, "form-control", 3, "ngClass"], [1, "fa", "fa-money-bill"], ["id", "AmountId", "placeholder", "Amount *", "formControlName", "amount", "type", "number", 1, "form-control", 3, "ngClass"], [1, "row", "d-flex", "justify-content-center"], [1, "col-lg-4", "margin-top-md"], ["type", "submit", 1, "btn", "btn-outline-success", "full-width", 3, "disabled"], ["type", "button", 1, "btn", "btn-outline-danger", "full-width", 3, "click"], [1, "fa", "fa-id-badge", "margin-right-xsm"], ["formControlName", "loaderList", "id", "LoaderList", 1, "custom-select"], ["value", "", "defaultValue", "", "disabled", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function CashInComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -1368,7 +1373,7 @@ CashInComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.amountMessage, " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", !ctx.transactionDetailsForm.valid);
-    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_x"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY29yZC9jYXNoLWluL2Nhc2gtaW4uY29tcG9uZW50LnNjc3MifQ== */"] });
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_x"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY29yZC9jYXNoLWluL2Nhc2gtaW4uY29tcG9uZW50LnNjc3MifQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CashInComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1376,7 +1381,7 @@ CashInComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
                 templateUrl: './cash-in.component.html',
                 styleUrls: ['./cash-in.component.scss']
             }]
-    }], function () { return [{ type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }, { type: src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__["TransactionService"] }, { type: ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__["NgxUiLoaderService"] }, { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"] }]; }, { isFormDirty: [{
+    }], function () { return [{ type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }, { type: src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__["TransactionService"] }, { type: ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__["NgxUiLoaderService"] }, { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"] }, { type: src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_8__["GlobalService"] }]; }, { isFormDirty: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }] }); })();
 
@@ -1401,7 +1406,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/transaction.service */ "./src/app/shared/transaction.service.ts");
 /* harmony import */ var ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-ui-loader */ "./node_modules/ngx-ui-loader/__ivy_ngcc__/fesm2015/ngx-ui-loader.js");
 /* harmony import */ var src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/shared/user.service */ "./src/app/shared/user.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/shared/global.service */ "./src/app/shared/global.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
 
 
 
@@ -1450,12 +1457,13 @@ const _c0 = function (a0, a1) { return { "col-md-12 margin-bottom-sm": a0, "col-
 const _c1 = function (a0, a1) { return { "fa fa-people-arrows": a0, "fas fa-arrow-circle-left": a1 }; };
 const _c2 = function (a0, a1, a2) { return { "is-invalid": a0, "is-valid": a1, "": a2 }; };
 class CashOutComponent {
-    constructor(fb, toastr, transactionService, ngxService, userService) {
+    constructor(fb, toastr, transactionService, ngxService, userService, globalService) {
         this.fb = fb;
         this.toastr = toastr;
         this.transactionService = transactionService;
         this.ngxService = ngxService;
         this.userService = userService;
+        this.globalService = globalService;
         this.loaderList = [];
         this.isCashOutForOtherLoader = false;
         this.cashOutButtonText = "Cash-Out for other Loader";
@@ -1477,6 +1485,7 @@ class CashOutComponent {
         this.constants = new src_app_shared_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"]();
     }
     ngOnInit() {
+        this.globalService.redirectUnauthorizedUser();
         this.transactionDetailsForm = this.fb.group({
             transactionType: ['Cash-Out'],
             loaderList: [''],
@@ -1586,7 +1595,7 @@ class CashOutComponent {
         form.get("transactionType").setValue("Cash-Out");
     }
 }
-CashOutComponent.ɵfac = function CashOutComponent_Factory(t) { return new (t || CashOutComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__["TransactionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__["NgxUiLoaderService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"])); };
+CashOutComponent.ɵfac = function CashOutComponent_Factory(t) { return new (t || CashOutComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__["TransactionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__["NgxUiLoaderService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_8__["GlobalService"])); };
 CashOutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CashOutComponent, selectors: [["app-cash-out"]], outputs: { isFormDirty: "isFormDirty" }, decls: 64, vars: 31, consts: [[1, "cash-out-section"], [1, "container", "margin-top-lg", "cash-inout-container"], [1, "card"], [1, "card-body"], [1, "card-title", "text-uppercase", "d-flex", "align-items-center"], ["src", "\\assets\\images\\cash-out-icon.png", "alt", "Generic placeholder image", 1, "align-self-center", "mr-3", 2, "width", "70px", "height", "70px"], [1, "card-subtitle", "mb-2", "text-muted", "margin-top-md"], [1, "row", "margin-top-md"], [1, "col"], [3, "formGroup", "ngSubmit"], [1, "row", "margin-top-sm"], [3, "ngClass"], ["type", "button", 1, "btn", "btn-outline-dark", "full-width", 3, "click"], ["class", "col-md-6", 4, "ngIf"], [1, "form-group"], [1, "input-group"], [1, "input-group-prepend"], [1, "input-group-text"], [1, "fas", "fa-cash-register"], ["id", "TransactionTypeId", "placeholder", "Transaction Type *", "formControlName", "transactionType", "type", "text", "disabled", "", 1, "form-control"], [1, "col-md-6"], [1, "fa", "fa-user", "margin-right-xsm"], ["id", "PlayerUserNameId", "placeholder", "Player Username *", "formControlName", "playerUserName", "type", "text", 1, "form-control", 3, "ngClass"], [1, "invalid-feedback"], [1, "fa", "fa-barcode"], ["id", "ReferenceNoId", "placeholder", "Reference No. *", "formControlName", "referenceNo", "type", "text", 1, "form-control", 3, "ngClass"], [1, "fa", "fa-money-bill"], ["id", "AmountId", "placeholder", "Amount *", "formControlName", "amount", "type", "number", 1, "form-control", 3, "ngClass"], [1, "row", "d-flex", "justify-content-center"], [1, "col-lg-4", "margin-top-md"], ["type", "submit", 1, "btn", "btn-outline-success", "full-width", 3, "disabled"], ["type", "button", 1, "btn", "btn-outline-danger", "full-width", 3, "click"], [1, "fa", "fa-id-badge", "margin-right-xsm"], ["formControlName", "loaderList", "id", "LoaderList", 1, "custom-select"], ["value", "", "defaultValue", "", "disabled", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function CashOutComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -1723,7 +1732,7 @@ CashOutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.amountMessage, " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", !ctx.transactionDetailsForm.valid);
-    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_x"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY29yZC9jYXNoLW91dC9jYXNoLW91dC5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_x"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY29yZC9jYXNoLW91dC9jYXNoLW91dC5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CashOutComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1731,45 +1740,9 @@ CashOutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
                 templateUrl: './cash-out.component.html',
                 styleUrls: ['./cash-out.component.scss']
             }]
-    }], function () { return [{ type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }, { type: src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__["TransactionService"] }, { type: ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__["NgxUiLoaderService"] }, { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"] }]; }, { isFormDirty: [{
+    }], function () { return [{ type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }, { type: src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_5__["TransactionService"] }, { type: ngx_ui_loader__WEBPACK_IMPORTED_MODULE_6__["NgxUiLoaderService"] }, { type: src_app_shared_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"] }, { type: src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_8__["GlobalService"] }]; }, { isFormDirty: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }] }); })();
-
-
-/***/ }),
-
-/***/ "./src/app/record/record-update-dialog/record-update-dialog.component.ts":
-/*!*******************************************************************************!*\
-  !*** ./src/app/record/record-update-dialog/record-update-dialog.component.ts ***!
-  \*******************************************************************************/
-/*! exports provided: RecordUpdateDialogComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecordUpdateDialogComponent", function() { return RecordUpdateDialogComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-
-
-class RecordUpdateDialogComponent {
-    constructor() { }
-    ngOnInit() {
-    }
-}
-RecordUpdateDialogComponent.ɵfac = function RecordUpdateDialogComponent_Factory(t) { return new (t || RecordUpdateDialogComponent)(); };
-RecordUpdateDialogComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RecordUpdateDialogComponent, selectors: [["app-record-update-dialog"]], decls: 2, vars: 0, template: function RecordUpdateDialogComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "record-update-dialog works!");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlY29yZC9yZWNvcmQtdXBkYXRlLWRpYWxvZy9yZWNvcmQtdXBkYXRlLWRpYWxvZy5jb21wb25lbnQuc2NzcyJ9 */"] });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RecordUpdateDialogComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: 'app-record-update-dialog',
-                templateUrl: './record-update-dialog.component.html',
-                styleUrls: ['./record-update-dialog.component.scss']
-            }]
-    }], function () { return []; }, null); })();
 
 
 /***/ }),
@@ -1986,6 +1959,7 @@ class LoadersTransactionsComponent {
         this.filterAmount = { count: 0 };
     }
     ngOnInit() {
+        this.globalService.redirectUnauthorizedUser();
         this.showSpinner = true;
         this.transactionService.getTransactionDetails().subscribe({
             next: transactionDetails => this.transactionDetails = this.onComplete(transactionDetails),
@@ -2245,10 +2219,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/shared/transaction.service */ "./src/app/shared/transaction.service.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
 /* harmony import */ var ngx_ui_loader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-ui-loader */ "./node_modules/ngx-ui-loader/__ivy_ngcc__/fesm2015/ngx-ui-loader.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/__ivy_ngcc__/dist/ngx-pagination.js");
-/* harmony import */ var _shared_pipes_search_filter_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../shared/pipes/search-filter.pipe */ "./src/app/shared/pipes/search-filter.pipe.ts");
+/* harmony import */ var src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/shared/global.service */ "./src/app/shared/global.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/__ivy_ngcc__/dist/ngx-pagination.js");
+/* harmony import */ var _shared_pipes_search_filter_pipe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../shared/pipes/search-filter.pipe */ "./src/app/shared/pipes/search-filter.pipe.ts");
+
 
 
 
@@ -2380,10 +2356,11 @@ function MyTransactionsComponent_tr_52_Template(rf, ctx) { if (rf & 1) {
 } }
 const _c0 = function (a1) { return { itemsPerPage: 30, currentPage: a1 }; };
 class MyTransactionsComponent {
-    constructor(transactionService, toastr, ngxService) {
+    constructor(transactionService, toastr, ngxService, globalService) {
         this.transactionService = transactionService;
         this.toastr = toastr;
         this.ngxService = ngxService;
+        this.globalService = globalService;
         this.p = 1;
         this.transactionDetails = [];
         this.errorMessage = '';
@@ -2392,6 +2369,7 @@ class MyTransactionsComponent {
         this.filterAmount = { count: 0 };
     }
     ngOnInit() {
+        this.globalService.redirectUnauthorizedUser();
         this.showSpinner = true;
         this.transactionService.getTransactionDetailsByUserId().subscribe({
             next: transactionDetails => this.transactionDetails = this.onComplete(transactionDetails),
@@ -2463,7 +2441,7 @@ class MyTransactionsComponent {
         return this.cashIn - this.cashOut;
     }
 }
-MyTransactionsComponent.ɵfac = function MyTransactionsComponent_Factory(t) { return new (t || MyTransactionsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_1__["TransactionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_ui_loader__WEBPACK_IMPORTED_MODULE_3__["NgxUiLoaderService"])); };
+MyTransactionsComponent.ɵfac = function MyTransactionsComponent_Factory(t) { return new (t || MyTransactionsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_1__["TransactionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_ui_loader__WEBPACK_IMPORTED_MODULE_3__["NgxUiLoaderService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_4__["GlobalService"])); };
 MyTransactionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MyTransactionsComponent, selectors: [["app-my-transactions"]], decls: 63, vars: 18, consts: [[1, "my-transaction-section"], [1, "container-fluid", "margin-top-lg", "padding-left-xlg", "padding-right-xlg", "my-transaction-container"], [1, "card"], [1, "card-body"], [1, "card-title", "text-uppercase", "d-flex", "align-items-center"], ["src", "\\assets\\images\\my-transactions-icon.png", "alt", "Generic placeholder image", 1, "align-self-center", "mr-3", 2, "width", "70px", "height", "70px"], [1, "card-subtitle", "mb-2", "text-muted", "margin-top-md"], [1, "row", "margin-top-md"], [1, "col-lg-9"], [1, "row", "d-flex", "justify-content-start"], [1, "col-lg-2", "margin-top-md"], ["type", "button", 1, "btn", "btn-info", "text-uppercase", "full-width", 3, "click"], [1, "fa", "fa-search"], ["class", "col-lg-3 margin-top-md", 4, "ngIf"], ["class", "margin-top-md divider-padding", 4, "ngIf"], [1, "col-lg-3", "margin-top-md"], [1, "input-group"], ["id", "SearchId", "placeholder", "Search", "type", "text", 1, "form-control", 3, "ngModel", "ngModelChange"], [1, "input-group-append"], [1, "input-group-text"], [1, "col", "table-responsive"], [1, "table", "table-hover"], [1, "text-uppercase"], ["scope", "col"], [4, "ngFor", "ngForOf"], [4, "ngIf"], ["class", "fa-3x", 4, "ngIf"], [1, "row", "margin-top-sm"], [1, "col", "offset-lg-9", "margin-top-md"], [1, "input-group-prepend"], [1, "fas", "fa-money-bill-wave"], ["id", "AmountId", "type", "text", "disabled", "", 1, "form-control", 3, "ngModel", "ngModelChange"], [1, "col", "d-flex", "justify-content-center"], [3, "pageChange"], ["type", "datetime-local", 1, "form-control", 3, "ngModel", "ngModelChange"], [1, "margin-top-md", "divider-padding"], ["type", "button", "class", "btn btn-info text-uppercase full-width", 3, "disabled", "click", 4, "ngIf"], ["type", "button", "class", "btn btn-danger text-uppercase full-width", 3, "click", 4, "ngIf"], ["type", "button", 1, "btn", "btn-info", "text-uppercase", "full-width", 3, "disabled", "click"], [1, "fa", "fa-check"], ["type", "button", 1, "btn", "btn-danger", "text-uppercase", "full-width", 3, "click"], [1, "fas", "fa-sync-alt"], ["colspan", "8"], [1, "fa-3x"], [1, "fas", "fa-spinner", "fa-pulse"]], template: function MyTransactionsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -2590,7 +2568,7 @@ MyTransactionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.showSpinner);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.filterAmount.count);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], ngx_pagination__WEBPACK_IMPORTED_MODULE_6__["PaginationControlsComponent"]], pipes: [ngx_pagination__WEBPACK_IMPORTED_MODULE_6__["PaginatePipe"], _shared_pipes_search_filter_pipe__WEBPACK_IMPORTED_MODULE_7__["SearchFilterPipe"]], styles: [".my-transaction-container[_ngcontent-%COMP%] {\n  margin-bottom: 80px;\n  padding-left: 60px;\n  padding-right: 60px;\n}\n\n\n\n@media all and (max-width: 320px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 10px;\n    padding-right: 10px;\n    margin-bottom: 120px;\n  }\n}\n\n@media all and (max-width: 400px) and (min-width: 321px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 20px;\n    padding-right: 20px;\n    margin-bottom: 120px;\n  }\n}\n\n@media all and (max-width: 700px) and (min-width: 401px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 30px;\n    padding-right: 30px;\n  }\n}\n\n@media all and (max-width: 768px) and (min-width: 701px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 40px;\n    padding-right: 40px;\n  }\n}\n\n@media all and (max-width: 1024px) and (min-width: 769px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 40px;\n    padding-right: 40px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVwb3J0cy9teS10cmFuc2FjdGlvbnMvbXktdHJhbnNhY3Rpb25zLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksbUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FBQ0o7O0FBR0Esc0JBQUE7O0FBRUE7RUFDSTtJQUNJLGtCQUFBO0lBQ0EsbUJBQUE7SUFDQSxvQkFBQTtFQUROO0FBQ0Y7O0FBSUE7RUFDSTtJQUNJLGtCQUFBO0lBQ0EsbUJBQUE7SUFDQSxvQkFBQTtFQUZOO0FBQ0Y7O0FBS0E7RUFDSTtJQUNJLGtCQUFBO0lBQ0EsbUJBQUE7RUFITjtBQUNGOztBQU1BO0VBQ0k7SUFDSSxrQkFBQTtJQUNBLG1CQUFBO0VBSk47QUFDRjs7QUFPQTtFQUNJO0lBQ0ksa0JBQUE7SUFDQSxtQkFBQTtFQUxOO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9yZXBvcnRzL215LXRyYW5zYWN0aW9ucy9teS10cmFuc2FjdGlvbnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubXktdHJhbnNhY3Rpb24tY29udGFpbmVyIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDgwcHg7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDYwcHg7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiA2MHB4O1xyXG59XHJcblxyXG5cclxuLyogUmVzcG9uc2l2ZSBEZXNpZ24gKi9cclxuXHJcbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDMyMHB4KSB7XHJcbiAgICAubXktdHJhbnNhY3Rpb24tY29udGFpbmVyIHtcclxuICAgICAgICBwYWRkaW5nLWxlZnQ6IDEwcHg7XHJcbiAgICAgICAgcGFkZGluZy1yaWdodDogMTBweDtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAxMjBweDtcclxuICAgIH1cclxufVxyXG5cclxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogNDAwcHgpIGFuZCAobWluLXdpZHRoOiAzMjFweCkge1xyXG4gICAgLm15LXRyYW5zYWN0aW9uLWNvbnRhaW5lciB7XHJcbiAgICAgICAgcGFkZGluZy1sZWZ0OiAyMHB4O1xyXG4gICAgICAgIHBhZGRpbmctcmlnaHQ6IDIwcHg7XHJcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMTIwcHg7XHJcbiAgICB9XHJcbn1cclxuXHJcbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDcwMHB4KSBhbmQgKG1pbi13aWR0aDogNDAxcHgpIHtcclxuICAgIC5teS10cmFuc2FjdGlvbi1jb250YWluZXIge1xyXG4gICAgICAgIHBhZGRpbmctbGVmdDogMzBweDtcclxuICAgICAgICBwYWRkaW5nLXJpZ2h0OiAzMHB4O1xyXG4gICAgfVxyXG59XHJcblxyXG5AbWVkaWEgYWxsIGFuZCAobWF4LXdpZHRoOiA3NjhweCkgYW5kIChtaW4td2lkdGg6IDcwMXB4KSB7XHJcbiAgICAubXktdHJhbnNhY3Rpb24tY29udGFpbmVyIHtcclxuICAgICAgICBwYWRkaW5nLWxlZnQ6IDQwcHg7XHJcbiAgICAgICAgcGFkZGluZy1yaWdodDogNDBweDtcclxuICAgIH1cclxufVxyXG5cclxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogMTAyNHB4KSBhbmQgKG1pbi13aWR0aDogNzY5cHgpIHtcclxuICAgIC5teS10cmFuc2FjdGlvbi1jb250YWluZXIge1xyXG4gICAgICAgIHBhZGRpbmctbGVmdDogNDBweDtcclxuICAgICAgICBwYWRkaW5nLXJpZ2h0OiA0MHB4O1xyXG4gICAgfVxyXG59Il19 */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], ngx_pagination__WEBPACK_IMPORTED_MODULE_7__["PaginationControlsComponent"]], pipes: [ngx_pagination__WEBPACK_IMPORTED_MODULE_7__["PaginatePipe"], _shared_pipes_search_filter_pipe__WEBPACK_IMPORTED_MODULE_8__["SearchFilterPipe"]], styles: [".my-transaction-container[_ngcontent-%COMP%] {\n  margin-bottom: 80px;\n  padding-left: 60px;\n  padding-right: 60px;\n}\n\n\n\n@media all and (max-width: 320px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 10px;\n    padding-right: 10px;\n    margin-bottom: 120px;\n  }\n}\n\n@media all and (max-width: 400px) and (min-width: 321px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 20px;\n    padding-right: 20px;\n    margin-bottom: 120px;\n  }\n}\n\n@media all and (max-width: 700px) and (min-width: 401px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 30px;\n    padding-right: 30px;\n  }\n}\n\n@media all and (max-width: 768px) and (min-width: 701px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 40px;\n    padding-right: 40px;\n  }\n}\n\n@media all and (max-width: 1024px) and (min-width: 769px) {\n  .my-transaction-container[_ngcontent-%COMP%] {\n    padding-left: 40px;\n    padding-right: 40px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVwb3J0cy9teS10cmFuc2FjdGlvbnMvbXktdHJhbnNhY3Rpb25zLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksbUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FBQ0o7O0FBR0Esc0JBQUE7O0FBRUE7RUFDSTtJQUNJLGtCQUFBO0lBQ0EsbUJBQUE7SUFDQSxvQkFBQTtFQUROO0FBQ0Y7O0FBSUE7RUFDSTtJQUNJLGtCQUFBO0lBQ0EsbUJBQUE7SUFDQSxvQkFBQTtFQUZOO0FBQ0Y7O0FBS0E7RUFDSTtJQUNJLGtCQUFBO0lBQ0EsbUJBQUE7RUFITjtBQUNGOztBQU1BO0VBQ0k7SUFDSSxrQkFBQTtJQUNBLG1CQUFBO0VBSk47QUFDRjs7QUFPQTtFQUNJO0lBQ0ksa0JBQUE7SUFDQSxtQkFBQTtFQUxOO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9yZXBvcnRzL215LXRyYW5zYWN0aW9ucy9teS10cmFuc2FjdGlvbnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubXktdHJhbnNhY3Rpb24tY29udGFpbmVyIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDgwcHg7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDYwcHg7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiA2MHB4O1xyXG59XHJcblxyXG5cclxuLyogUmVzcG9uc2l2ZSBEZXNpZ24gKi9cclxuXHJcbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDMyMHB4KSB7XHJcbiAgICAubXktdHJhbnNhY3Rpb24tY29udGFpbmVyIHtcclxuICAgICAgICBwYWRkaW5nLWxlZnQ6IDEwcHg7XHJcbiAgICAgICAgcGFkZGluZy1yaWdodDogMTBweDtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAxMjBweDtcclxuICAgIH1cclxufVxyXG5cclxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogNDAwcHgpIGFuZCAobWluLXdpZHRoOiAzMjFweCkge1xyXG4gICAgLm15LXRyYW5zYWN0aW9uLWNvbnRhaW5lciB7XHJcbiAgICAgICAgcGFkZGluZy1sZWZ0OiAyMHB4O1xyXG4gICAgICAgIHBhZGRpbmctcmlnaHQ6IDIwcHg7XHJcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMTIwcHg7XHJcbiAgICB9XHJcbn1cclxuXHJcbkBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6IDcwMHB4KSBhbmQgKG1pbi13aWR0aDogNDAxcHgpIHtcclxuICAgIC5teS10cmFuc2FjdGlvbi1jb250YWluZXIge1xyXG4gICAgICAgIHBhZGRpbmctbGVmdDogMzBweDtcclxuICAgICAgICBwYWRkaW5nLXJpZ2h0OiAzMHB4O1xyXG4gICAgfVxyXG59XHJcblxyXG5AbWVkaWEgYWxsIGFuZCAobWF4LXdpZHRoOiA3NjhweCkgYW5kIChtaW4td2lkdGg6IDcwMXB4KSB7XHJcbiAgICAubXktdHJhbnNhY3Rpb24tY29udGFpbmVyIHtcclxuICAgICAgICBwYWRkaW5nLWxlZnQ6IDQwcHg7XHJcbiAgICAgICAgcGFkZGluZy1yaWdodDogNDBweDtcclxuICAgIH1cclxufVxyXG5cclxuQG1lZGlhIGFsbCBhbmQgKG1heC13aWR0aDogMTAyNHB4KSBhbmQgKG1pbi13aWR0aDogNzY5cHgpIHtcclxuICAgIC5teS10cmFuc2FjdGlvbi1jb250YWluZXIge1xyXG4gICAgICAgIHBhZGRpbmctbGVmdDogNDBweDtcclxuICAgICAgICBwYWRkaW5nLXJpZ2h0OiA0MHB4O1xyXG4gICAgfVxyXG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MyTransactionsComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -2598,7 +2576,7 @@ MyTransactionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
                 templateUrl: './my-transactions.component.html',
                 styleUrls: ['./my-transactions.component.scss']
             }]
-    }], function () { return [{ type: src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_1__["TransactionService"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] }, { type: ngx_ui_loader__WEBPACK_IMPORTED_MODULE_3__["NgxUiLoaderService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_shared_transaction_service__WEBPACK_IMPORTED_MODULE_1__["TransactionService"] }, { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] }, { type: ngx_ui_loader__WEBPACK_IMPORTED_MODULE_3__["NgxUiLoaderService"] }, { type: src_app_shared_global_service__WEBPACK_IMPORTED_MODULE_4__["GlobalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -2797,11 +2775,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalService", function() { return GlobalService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
 
 
 
 class GlobalService {
-    constructor() {
+    constructor(router) {
+        this.router = router;
         this.userLoggedIn = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
         this.userLoggedIn.next(false);
         this.userFullName = "";
@@ -2841,19 +2822,24 @@ class GlobalService {
     GetUserFullName() {
         return localStorage.getItem("fullName");
     }
+    redirectUnauthorizedUser() {
+        if (!this.isAuthenticated()) {
+            this.router.navigate(['/user/login']);
+        }
+    }
     baseUrl() {
         return '';
         // return 'https://localhost:44393/'
     }
 }
-GlobalService.ɵfac = function GlobalService_Factory(t) { return new (t || GlobalService)(); };
+GlobalService.ɵfac = function GlobalService_Factory(t) { return new (t || GlobalService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
 GlobalService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: GlobalService, factory: GlobalService.ɵfac, providedIn: "root" });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GlobalService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: "root"
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }]; }, null); })();
 
 
 /***/ }),
@@ -4277,6 +4263,7 @@ class UserProfileComponent {
         this.constants = new src_app_shared_constants__WEBPACK_IMPORTED_MODULE_4__["Constants"]();
     }
     ngOnInit() {
+        this.globalService.redirectUnauthorizedUser();
         this.userService.getUserProfile().subscribe({
             next: user => this.user = user,
             error: err => this.errorMessage = err
