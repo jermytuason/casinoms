@@ -45,20 +45,25 @@ namespace CasinoMS.Data.Repository.User
             {
                 foreach (var item in entities)
                 {
-                    var account = casinoMSDBContext.scr_account.FirstOrDefault(x => x.UserId == item.UserId);
+                    var account = casinoMSDBContext.scr_account.FirstOrDefault(x => x.UserId == item.UserId && x.IsActive == true);
 
-                    var userViewModel = new UserViewModel();
-                    userViewModel.FirstName = item.FirstName;
-                    userViewModel.LastName = item.LastName;
-                    userViewModel.FullName = DataHandler.GetFullName(item.FirstName, item.LastName);
-                    userViewModel.Alias = item.Alias;
-                    userViewModel.TeamName = item.DefTeams.Description;
-                    userViewModel.EmailAddress = account.Email;
-                    userViewModel.UserName = account.UserName;
-                    userViewModel.UserType = item.DefUserType.Description;
-                    userViewModel.UserId = item.UserId.ToString();
+                    if (account != null)
+                    {
+                        var userViewModel = new UserViewModel();
+                        userViewModel.Id = account.Id;
+                        userViewModel.FirstName = item.FirstName;
+                        userViewModel.LastName = item.LastName;
+                        userViewModel.FullName = DataHandler.GetFullName(item.FirstName, item.LastName);
+                        userViewModel.Alias = item.Alias;
+                        userViewModel.TeamName = item.DefTeams.Description;
+                        userViewModel.EmailAddress = account.Email;
+                        userViewModel.UserName = account.UserName;
+                        userViewModel.UserType = item.DefUserType.Description;
+                        userViewModel.UserId = item.UserId.ToString();
+                        userViewModel.IsActive = account.IsActive;
 
-                    model.Add(userViewModel);
+                        model.Add(userViewModel);
+                    }
                 }
             }
 
@@ -91,6 +96,7 @@ namespace CasinoMS.Data.Repository.User
                     userViewModel.UserName = account.UserName;
                     userViewModel.UserType = item.DefUserType.Description;
                     userViewModel.UserId = item.UserId.ToString();
+                    userViewModel.IsActive = account.IsActive;
 
                     model.Add(userViewModel);
                 }
@@ -126,6 +132,7 @@ namespace CasinoMS.Data.Repository.User
                     userViewModel.UserName = account.UserName;
                     userViewModel.UserType = item.DefUserType.Description;
                     userViewModel.UserId = item.UserId.ToString();
+                    userViewModel.IsActive = account.IsActive;
 
                     model.Add(userViewModel);
                 }
@@ -157,6 +164,7 @@ namespace CasinoMS.Data.Repository.User
                 userViewModel.UserName = account.UserName;
                 userViewModel.UserType = entity.DefUserType.Description;
                 userViewModel.UserId = entity.UserId.ToString();
+                userViewModel.IsActive = account.IsActive;
             }
 
             return userViewModel;
@@ -185,6 +193,7 @@ namespace CasinoMS.Data.Repository.User
                 userViewModel.UserName = account.UserName;
                 userViewModel.UserType = entity.DefUserType.Description;
                 userViewModel.UserId = entity.UserId.ToString();
+                userViewModel.IsActive = account.IsActive;
             }
 
             return userViewModel;
@@ -305,6 +314,15 @@ namespace CasinoMS.Data.Repository.User
         public async Task<bool> IsPasswordValid(ScrAccount account, string password)
         {
             return await userManager.CheckPasswordAsync(account, password);
+        }
+
+        public async Task<ScrAccount> ChangePasswordAsync(string id, string newPassword)
+        {
+            var user = await userManager.FindByIdAsync(id);
+
+            user.PasswordHash = userManager.PasswordHasher.HashPassword(user, newPassword);
+
+            return user;
         }
 
         public bool Commit()

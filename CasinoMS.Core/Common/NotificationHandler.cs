@@ -29,6 +29,13 @@ namespace CasinoMS.Core.Common
             SendEmail(model.Email, emailTo, model.Subject, model.Body);
         }
 
+        public static void SendResetPasswordEmailConfirmation(INotification notification, string fullName, string emailTo, string newPassword)
+        {
+            var model = notification.ResetPasswordEmailConfirmation(fullName, newPassword);
+
+            SendEmail(model.Email, emailTo, model.Subject, model.Body);
+        }
+
         public static void SendSMSConfirmation()
         {
             throw new NotImplementedException();

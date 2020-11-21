@@ -171,6 +171,81 @@ namespace CasinoMS.Api.Controllers
             }
         }
 
+        // PUT: api/User/ChangePassword
+        [HttpPut]
+        [Route("ChangePassword/{userName}/{currentPassword}/{newPassword}")]
+        public async Task<ActionResult<UserViewModel>> ChangePassword(string userName, string currentPassword, string newPassword)
+        {
+            processId = Guid.NewGuid();
+
+            try
+            {
+                var account = await userRepository.GetUserByUserName(userName);
+
+                if (account != null && await userRepository.IsPasswordValid(account, currentPassword))
+                {
+                    var result = userRepository.ChangePasswordAsync(account.Id, newPassword);
+
+                    if (userRepository.Commit())
+                    {
+                        return Ok(account);
+                    }
+                }
+
+                return BadRequest($"Failed to change password. Your current password is incorrect.");
+            }
+            catch (Exception ex)
+            {
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
+                {
+                    message = ex.InnerException.Message;
+                }
+
+                PostError(processId, ex.Message, message, WebAPINamesConstants.GetTransactionDetails, userName);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        // PUT: api/User/ResetPassword
+        [HttpPut]
+        [Route("ResetPassword/{userName}/{email}")]
+        public ActionResult<UserViewModel> ResetPassword(string userName, string email)
+        {
+            processId = Guid.NewGuid();
+
+            try
+            {
+                var userList = userRepository.GetAllUsers();
+                var user = userList.Where(x => x.UserName == userName && x.EmailAddress == email).FirstOrDefault();
+                var newPassword = Guid.NewGuid();
+
+                if (user != null && user.UserId != null)
+                {
+                    var result = userRepository.ChangePasswordAsync(user.Id, newPassword.ToString());
+
+                    if (userRepository.Commit())
+                    {
+                        userWorkerService.SendResetPasswordEmailConfirmationPerUser(user.UserType, user.EmailAddress,
+                                                                                    DataHandler.GetFullName(user.FirstName, user.LastName),
+                                                                                    newPassword.ToString());
+                        return Ok(user);
+                    }
+                }
+
+                return BadRequest($"Failed to reset password.");
+            }
+            catch (Exception ex)
+            {
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
+                {
+                    message = ex.InnerException.Message;
+                }
+
+                PostError(processId, ex.Message, message, WebAPINamesConstants.GetTransactionDetails, userName);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
         #region Private Methods
 
         private async Task<ActionResult<UserViewModel>> GetAuthenticatedUser()

@@ -45,5 +45,17 @@ namespace CasinoMS.Core.WorkerService
                 NotificationHandler.SendEmailVerification(financerNotification, fullName, emailAddress);
             }
         }
+
+        public void SendResetPasswordEmailConfirmationPerUser(string userType, string emailAddress, string fullName, string newPassword)
+        {
+            if (userType.Equals(UserTypeConstants.Loader))
+            {
+                NotificationHandler.SendResetPasswordEmailConfirmation(loaderNotification, fullName, emailAddress, newPassword);
+            }
+            else if (userType.Equals(UserTypeConstants.Financer))
+            {
+                NotificationHandler.SendResetPasswordEmailConfirmation(financerNotification, fullName, emailAddress, newPassword);
+            }
+        }
     }
 }

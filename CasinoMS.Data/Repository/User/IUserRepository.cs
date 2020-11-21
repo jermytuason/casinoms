@@ -1,5 +1,6 @@
 ﻿using CasinoMS.Data.Entities.Security;
 using CasinoMS.Data.ViewModel;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +20,7 @@ namespace CasinoMS.Data.Repository.User
         Task<ScrAccount> GetUserByUserName(string userName);
         Task<object> AddAccountEntity(UserViewModel model);
         Task<bool> IsPasswordValid(ScrAccount account, string password);
+        Task<ScrAccount> ChangePasswordAsync(string userId, string newPassword);
         void AddUser(UserViewModel model, ScrAccount account);
         UserViewModel UpdateUserByUserName(string userName);
         void DeleteUser(Guid id);

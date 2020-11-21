@@ -53,6 +53,23 @@ namespace CasinoMS.Core.WorkerService
             return model;
         }
 
+        public MessageModel ResetPasswordEmailConfirmation(string fullName, string newPassword)
+        {
+            model.Subject = "Casino MS Financer Reset Password Confirmation";
+            model.Body = $"<p>Good Day {fullName},</p>" +
+                            "<p>Your request for password reset has been validated by the system. Please use this code as your new default password, </p>" +
+                            "<p> " + newPassword + " </p> " +
+                            "<p> Once you've successfully logged-in kindly change the default password to your desired password immediately.</p> " +
+                            "<p> If you haven't done this request, please send an email to&nbsp;" +
+                            "<a href = 'mailto:jjttechnologies@gmail.com'> jjttechnologies@gmail.com </a>.</p> " +
+                            "<p> Best regards,</p>" +
+                            "<p> Casino MS Team</p>";
+            model.Email = "jjttechnologies@gmail.com";
+            model.Password = "tuasondndn1831";
+
+            return model;
+        }
+
         public MessageModel SMSConfirmation()
         {
             throw new NotImplementedException();
