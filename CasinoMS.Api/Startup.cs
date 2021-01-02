@@ -130,7 +130,9 @@ namespace CasinoMS
 
             app.UseCors(builder =>
             {
-                builder.WithOrigins(Configuration["ApplicationSettings:AngularDevTest_Url"].ToString(), Configuration["ApplicationSettings:AzureDevTest_Url"].ToString());
+                builder.WithOrigins(Configuration["ApplicationSettings:AngularDevTest_Url"].ToString(), 
+                                    Configuration["ApplicationSettings:AzureDevTest_Url"].ToString(),
+                                    Configuration["ApplicationSettings:AzureProduction_Url"].ToString());
                 builder.AllowAnyHeader();
                 builder.AllowAnyMethod();
             });
