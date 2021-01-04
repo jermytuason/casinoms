@@ -234,14 +234,46 @@ namespace CasinoMS.Data.Repository.TransactionDetails
             casinoMSDBContext.Add(transactionDetails);
         }
 
-        public void UpdateTransactionDetails(Guid id)
+        public TransactionDetailsViewModel UpdateTransactionDetails(TransactionDetailsViewModel model)
         {
-            throw new NotImplementedException();
+            var entity = casinoMSDBContext.inf_transaction_details
+                                          .Include(x => x.InfUser)
+                                          .Where(x => x.TransactionId == Guid.Parse(model.TransactionId))
+                                          .FirstOrDefault();
+
+            var transactionDetailsViewModel = new TransactionDetailsViewModel();
+
+            if (entity != null)
+            {
+                entity.TransactionType = model.TransactionType;
+                entity.Amount = model.Amount;
+                entity.ReferenceNo = model.ReferenceNo;
+                entity.PlayerUserName = model.PlayerUserName;
+
+                transactionDetailsViewModel.Id = entity.Id.ToString();
+                transactionDetailsViewModel.TransactionId = entity.TransactionId.ToString();
+                transactionDetailsViewModel.TransactionType = entity.TransactionType;
+                transactionDetailsViewModel.PlayerUserName = entity.PlayerUserName;
+                transactionDetailsViewModel.ReferenceNo = entity.ReferenceNo;
+                transactionDetailsViewModel.Amount = entity.Amount;
+                transactionDetailsViewModel.SubmittedBy = entity.SubmittedBy;
+                transactionDetailsViewModel.SubmittedDate = entity.SubmittedDate.ToString();
+                transactionDetailsViewModel.FullName = DataHandler.GetFullName(entity.InfUser.FirstName, entity.InfUser.LastName);
+                transactionDetailsViewModel.UserId = entity.InfUser.UserId.ToString();
+                transactionDetailsViewModel.ProcessId = entity.ProcessId.ToString();
+            }
+
+            return transactionDetailsViewModel;
         }
 
-        public void DeleteTransactionDetails(Guid id)
+        public void DeleteTransactionDetails(Guid transactionId)
         {
-            throw new NotImplementedException();
+            var entity = casinoMSDBContext.inf_transaction_details
+                                          .Include(x => x.InfUser)
+                                          .Where(x => x.TransactionId == transactionId)
+                                          .FirstOrDefault();
+
+            casinoMSDBContext.inf_transaction_details.Remove(entity);
         }
 
         public bool Commit()

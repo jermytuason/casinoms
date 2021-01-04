@@ -14,8 +14,8 @@ namespace CasinoMS.Data.Repository.TransactionDetails
         TransactionDetailsViewModel GetTransactionDetailsById(Guid transactionId);
         TransactionDetailsViewModel GetTransactionDetailsByReferenceNo(string referenceNo);
         void AddTransactionDetails(TransactionDetailsViewModel model);
-        void UpdateTransactionDetails(Guid id);
-        void DeleteTransactionDetails(Guid id);
+        TransactionDetailsViewModel UpdateTransactionDetails(TransactionDetailsViewModel model);
+        void DeleteTransactionDetails(Guid transactionId);
         bool Commit();
 
     }

@@ -25,5 +25,6 @@ namespace CasinoMS.Core.Constants
         public const string PostTransactionDetails = "PostTransactionDetails";
         public const string GetUserProfile = "GetUserProfile";
         public const string GetTransactionDetails = "GetTransactionDetails";
+        public const string UpdateTransactionDetails = "UpdateTransactionDetails";
     }
 }

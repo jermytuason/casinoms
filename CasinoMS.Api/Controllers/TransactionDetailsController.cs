@@ -181,6 +181,69 @@ namespace CasinoMS.Api.Controllers
             }
         }
 
+        // PUT: api/TransactionDetails
+        [HttpPut]
+        [Authorize]
+        public async Task<IActionResult> Put([FromBody] TransactionDetailsViewModel model)
+        {
+            processId = Guid.NewGuid();
+            var user = await GetAuthenticatedUser();
+
+            try
+            {
+                var transactionDetails = transactionDetailsRepository.UpdateTransactionDetails(model);
+
+                if (transactionDetailsRepository.Commit())
+                {
+                    return Ok(transactionDetails);
+                }
+
+                return BadRequest($"Failed to update transaction details.");
+            }
+            catch (Exception ex)
+            {
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
+                {
+                    message = ex.InnerException.Message;
+                }
+
+                PostError(processId, ex.Message, message, WebAPINamesConstants.UpdateTransactionDetails, user.Value.UserName);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        // DELETE: api/TransactionDetails/DeleteTransactionRecord/{transactionId}
+        [HttpDelete]
+        [Authorize]
+        [Route("DeleteTransactionRecord/{transactionId}")]
+        public async Task<IActionResult> DeleteTransactionRecord(string transactionId)
+        {
+            processId = Guid.NewGuid();
+            var user = await GetAuthenticatedUser();
+
+            try
+            {
+                transactionDetailsRepository.DeleteTransactionDetails(Guid.Parse(transactionId));
+
+                if (transactionDetailsRepository.Commit())
+                {
+                    return Ok();
+                }
+
+                return BadRequest($"Failed to update transaction details.");
+            }
+            catch (Exception ex)
+            {
+                if (!ObjectHandler.IsObjectNull(ex.InnerException))
+                {
+                    message = ex.InnerException.Message;
+                }
+
+                PostError(processId, ex.Message, message, WebAPINamesConstants.UpdateTransactionDetails, user.Value.UserName);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
+        }
+
         #region Private Methods
 
         private async Task<ActionResult<UserViewModel>> GetAuthenticatedUser()
