@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using CasinoMS.Core.Common;
 using CasinoMS.Core.Constants;
 using CasinoMS.Data.Repositories.ErrorLogs;
+using CasinoMS.Data.Repository.PlayerRecord;
+using CasinoMS.Data.Repository.Team;
 using CasinoMS.Data.Repository.TransactionDetails;
 using CasinoMS.Data.Repository.User;
 using CasinoMS.Data.ViewModel;
@@ -23,6 +25,8 @@ namespace CasinoMS.Api.Controllers
         private readonly ITransactionDetailsRepository transactionDetailsRepository;
         private readonly IUserRepository userRepository;
         private readonly IErrorLogsRepository errorLogsRepository;
+        private readonly IPlayerRecordRepository playerRecordRepository;
+        private readonly ITeamRepository teamRepository;
         private string message = "";
         private Guid processId;
 
@@ -30,11 +34,14 @@ namespace CasinoMS.Api.Controllers
 
         #region Constructor
 
-        public TransactionDetailsController(ITransactionDetailsRepository transactionDetailsRepository, IUserRepository userRepository, IErrorLogsRepository errorLogsRepository)
+        public TransactionDetailsController(ITransactionDetailsRepository transactionDetailsRepository, IUserRepository userRepository, IErrorLogsRepository errorLogsRepository,
+                                            IPlayerRecordRepository playerRecordRepository, ITeamRepository teamRepository)
         {
             this.transactionDetailsRepository = transactionDetailsRepository;
             this.userRepository = userRepository;
             this.errorLogsRepository = errorLogsRepository;
+            this.playerRecordRepository = playerRecordRepository;
+            this.teamRepository = teamRepository;
         }
 
         #endregion
@@ -163,7 +170,14 @@ namespace CasinoMS.Api.Controllers
                 transactionDetailsRepository.AddTransactionDetails(model);
                 if (transactionDetailsRepository.Commit())
                 {
-                    //PostTransactionLog(transactionId, user.Value.UserId, WebAPINamesConstants.PostTransactionDetails, Status.Success, user.Value.Email);
+                    var playerRecordViewModel = playerRecordRepository.GetPlayerRecordByPlayerUserName(model.PlayerUserName);
+
+                    if (playerRecordViewModel.Id == 0 && playerRecordViewModel.PlayerUserName == null)
+                    {
+                        playerRecordRepository.AddPlayerRecord(InitPlayerRecordModel(model.PlayerUserName, model.Alias, user.Value.TeamName, processId));
+                        playerRecordRepository.Commit();
+                    }
+
                     return Ok();
                 }
 
@@ -245,6 +259,19 @@ namespace CasinoMS.Api.Controllers
         }
 
         #region Private Methods
+
+        private PlayerRecordViewModel InitPlayerRecordModel(string playerUserName, string createdBy, string teamName, Guid processId)
+        {
+            var team = teamRepository.GetTeamByDescription(teamName);
+
+            var playerRecordViewModel = new PlayerRecordViewModel();
+            playerRecordViewModel.PlayerUserName = playerUserName;
+            playerRecordViewModel.CreatedBy = createdBy;
+            playerRecordViewModel.TeamId = team.TeamId;
+            playerRecordViewModel.ProcessId = processId;
+
+            return playerRecordViewModel;
+        }
 
         private async Task<ActionResult<UserViewModel>> GetAuthenticatedUser()
         {

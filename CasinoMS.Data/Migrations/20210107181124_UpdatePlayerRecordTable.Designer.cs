@@ -4,14 +4,16 @@ using CasinoMS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CasinoMS.Data.Migrations
 {
     [DbContext(typeof(CasinoMSDBContext))]
-    partial class CasinoMSDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210107181124_UpdatePlayerRecordTable")]
+    partial class UpdatePlayerRecordTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

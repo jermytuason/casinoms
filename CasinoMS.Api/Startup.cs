@@ -26,6 +26,7 @@ using CasinoMS.Data.Repository.TransactionDetails;
 using System.IO;
 using CasinoMS.Core.Interface;
 using CasinoMS.Core.WorkerService;
+using CasinoMS.Data.Repository.PlayerRecord;
 
 namespace CasinoMS
 {
@@ -83,6 +84,7 @@ namespace CasinoMS
             services.AddScoped<IUserTypeRepository, UserTypeRepository>();
             services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddScoped<ITransactionDetailsRepository, TransactionDetailsRepository>();
+            services.AddScoped<IPlayerRecordRepository, PlayerRecordRepository>();
 
             #endregion
 

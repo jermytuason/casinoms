@@ -25,6 +25,7 @@ namespace CasinoMS.Data
         public DbSet<InfUser> inf_user { get; set; }
         public DbSet<InfErrorLogs> inf_error_logs { get; set; }
         public DbSet<InfTransactionDetails> inf_transaction_details { get; set; }
+        public DbSet<InfPlayerRecord> inf_player_record { get; set; }
 
         #endregion
 

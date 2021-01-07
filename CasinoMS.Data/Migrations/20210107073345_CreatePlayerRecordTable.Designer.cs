@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasinoMS.Data.Migrations
 {
     [DbContext(typeof(CasinoMSDBContext))]
-    [Migration("20201231053800_initdbtables")]
-    partial class initdbtables
+    [Migration("20210107073345_CreatePlayerRecordTable")]
+    partial class CreatePlayerRecordTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -119,6 +119,37 @@ namespace CasinoMS.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("inf_error_logs");
+                });
+
+            modelBuilder.Entity("CasinoMS.Data.Entity.Information.InfPlayerRecord", b =>
+                {
+                    b.Property<Guid>("PlayerRecordId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("PlayerUserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
+                    b.Property<Guid>("ProcessId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("PlayerRecordId");
+
+                    b.ToTable("inf_player_record");
                 });
 
             modelBuilder.Entity("CasinoMS.Data.Entity.Information.InfTransactionDetails", b =>

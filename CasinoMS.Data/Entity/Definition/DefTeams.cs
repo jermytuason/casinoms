@@ -26,5 +26,8 @@ namespace CasinoMS.Data.Entity.Definition
 
         [ForeignKey("TeamId")]
         public ICollection<InfUser> InfUser { get; set; }
+
+        [ForeignKey("TeamId")]
+        public ICollection<InfPlayerRecord> InfPlayerRecord { get; set; }
     }
 }
